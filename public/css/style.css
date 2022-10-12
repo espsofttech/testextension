@@ -1,0 +1,362 @@
+body a{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+.basic-text-area{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    max-width: 100%;
+}
+.text-dark{
+    color: #000!important   ;
+}
+.loader span{
+    height: 20px!important;
+    width: 20px!important;
+}
+.text-center{
+    text-align: center!important;
+}
+.text-light{
+    color: #fff;
+}
+.modal-close{
+    float: right;
+    cursor: pointer;
+    margin-top: -15px;
+}
+.modals h2{
+    font-size: 20px;
+    font-family: 'Bakbak one';
+}
+.center-img{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+button.logout {
+    margin-bottom: 12px;
+    background: #fbbd18;
+    color: #000;
+    font-family: 'Bakbak One';
+    margin-right: 25px;
+}
+.process{
+    margin:0px 10px;
+}
+button.logout:hover {
+ background-color: rgb(175, 132, 16);
+ color: #000;
+}
+.header{
+    padding: 15px;
+    color: #fff;
+    padding: 10px;
+}
+.header img {
+    max-width: 60px;
+    max-height: 60px;
+    margin-left: 25px;
+}
+.header h3{
+    font-family: 'Bakbak One';
+}
+.header h3 {
+    font-family: 'Bakbak One';
+    padding: 10px;
+}
+.side-menu div#demo-simple-select{
+    padding: 15px 15px 10px 15px;
+    font-size: 14px;
+    color: #fff;
+}
+.side-menu .select-network{
+    border-radius: 30px;
+}
+.side-menu label{
+    color: #fff!important;
+}
+.side-menu .select-network input{
+    height: 100%;
+    color: #fff;
+}
+.main-card {
+padding:10px 0px 0px 0px ;
+box-shadow: rgb(204 204 204 / 80%) 0px 2px 11px 0px;
+background-color: #fff;
+margin-top: 30px;
+}
+li .menu-dot {
+    height: 15px;
+    margin-right: 10px;
+    width: 15px;
+}
+.side-menu .menu-dot{
+    height: 15px;
+    margin-right: 10px;
+    width: 15px;
+}
+li.network-menu {
+    padding: 12px;
+    font-size: 15px;
+    font-family: 'Bakbak One';
+}
+.side-menu fieldset.MuiOutlinedInput-notchedOutline.css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+    border-color: #fff;
+}
+.select-network .MuiSvgIcon-fontSizeMedium.MuiSelect-icon   {
+    color: #fff;
+}
+.account-body button {
+    color: #000000c4;
+    font-size: 14px;
+}
+.account-body h5 {
+    color: #000000c4;
+    font-size: 20px;
+    font-family: 'Bakbak One';
+    text-align: center;
+}
+.border {
+    border-bottom: 1px solid #d6d9dc;
+    margin: 15px 0;
+}
+.currency-side img{
+    display: block;
+    margin: 0px auto;
+}
+.currency-side p{
+    margin: 10px 0px 0px 10px;
+    font-size: 16px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.currency-side h5{
+    font-family: 'Bakbak One';
+    font-size: 30px;
+    text-align: center;
+}
+.menu-icons button {
+    color: #000;
+    font-weight: bold;
+    background: #fbbd18;
+    font-size: 35px;
+    padding: 8px;
+    margin: 10px auto;
+    display: flex;
+}
+
+.menu-icons p{
+    text-align: center;
+}
+.selectedTag input{
+color: #fff!important;}
+.active-tab-data{
+    margin-top: 15px;
+}
+.active-data-tab{
+    margin-top: 10px!important;
+}
+/* ======================Wallets====================================================
+====================================================================================== */
+.create-page h3{
+    font-family: 'Bakbak One'!important;
+}
+
+.example-class{
+    background-color:#fbbd18;
+    height: 50px;
+    font-weight: 600;
+    width: 50px;
+    font-size: 18px;
+    text-transform: inherit;
+    border:none;
+
+}
+.create-page .create-btn {
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: inherit;
+}
+.import-wallet .create-btn{
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: inherit;
+}
+.create-check{
+    font-size: 16px;
+    font-weight: 600;
+}
+.new-wallet h3 {
+    margin: 30px;
+    font-size: 40px;
+    font-family: 'Bakbak One';
+}
+.modal-box {
+    width: 350px;
+}
+.wallet-cards {
+    text-align: center;
+    padding: 20px;
+}
+.wallet-cards  p{
+    color: #fff;
+}
+.wallet-cards svg{
+    height: 55px;
+    width: 55px;
+    filter: brightness(0)invert(1);
+}
+.select-wallet .create-btn{
+    margin: auto;
+}
+.select-wallet .create-btn {
+    margin: auto;
+    font-size: 14px;
+    font-weight: 600;
+}
+.import-wallet h3{
+    font-family: 'Bakbak One';
+    font-size: 38px;
+}
+
+.import-wallet p{
+    font-family: 'Poppins', sans-serif;
+
+}
+.select-phrase div#demo-simple-select{
+    padding: 12px;
+}
+.private-key input {
+    width: 170px;
+}
+.private-password label{
+    color: #000;
+    margin: 5px 0;
+    font-size: 17px;
+}
+.c-phrase input{
+    color: #037dd6;
+    font-size: 14px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    text-align: center;
+}
+.confirm-phrase button{
+    text-transform: none;
+    width: 100%;
+    justify-content:space-between
+}
+.confirm-phrase span{
+    margin-left:10px;
+    color: #ccc;
+    font-size: 14px;
+    text-align: right;
+}
+table th{
+    font-weight: bold!important;
+}
+.send-box {
+    box-shadow: 0px 0px 11px 2px #ccc;
+    padding: 25px;
+    border-radius: 15px;
+}   
+.recive-copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* -------receive and send --------- */
+.receive-wallet h3{
+    font-family: 'Bakbak One';
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.recive-copy button{
+    margin: 0px 10px;
+    font-size: 11px;
+}
+.receive-wallet h4{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'poppins';
+}
+.receive-wallet h5 {
+    font-size: 15px;
+    font-family: 'Poppins';
+}
+.import-modal h2{
+    font-size: 20px;
+    font-family: 'Bakbak One';
+}
+
+.modal-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 20px;
+}
+.form-p{
+    font-size: 18px!important ;
+}
+.assest-tab{
+    display: flex;
+    padding: 0!important;
+}
+.llc-img{
+margin: 0 10px;
+}
+.transection-box{
+border-bottom: 1px solid #ccc;
+padding: 15px;
+}
+.trans-left {
+    display: flex;
+}
+.trans-left .status-text p {
+    display: inline-block;
+    font-size: 13px;
+    font-family: 'poppins';
+    word-break: break-all;
+}
+.trans-left .status-text h4 {
+    font-size: 20px;
+    font-family: 'bakbak one';
+    margin-right:15px;
+    margin-bottom: 8px;
+}
+.trans-right span.date-time {
+    font-size: 11px;
+    color: green;
+    font-family: 'poppins';
+    display: block;
+}
+.status-icon svg {
+    background: #fbbd18;
+    height: 18px;
+    width: 18px;
+    padding: 5px;
+    margin: 15px;
+    border-radius: 50%;
+}
+.trans-right {
+    text-align: right;
+    font-family: 'poppins';
+}
+.trans-right p {
+    font-size: 18px;
+}
+.trans-right span {
+    font-size: 15px;
+}
+.trans-left .status-text p span{
+    font-weight: bold;
+   margin-right: 10px;
+}
