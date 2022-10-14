@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Grid,Typography} from '@mui/material';
 import SideHeader from './SideHeader';
 import logo from '../images/logo.png'
-import config from '../config/config';
+// import config from '../config/config';
 import {Link} from 'react-router-dom'
 
 const MainHeader = (props) => {
@@ -16,7 +16,7 @@ const MainHeader = (props) => {
                         backgroundColor: '#040c12'
                     }}>
                     <Grid item md={6} display={"flex"} >
-                       <Link to={`${config.baseUrl}home`}> <img src={logo} /></Link>
+                   <img src={logo} />
                         <Typography variant="h4" component="h3" >
                             Little Lambo
                         </Typography>

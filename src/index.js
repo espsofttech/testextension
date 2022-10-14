@@ -5,11 +5,12 @@ import App from './App';
 import Signup  from './Components/Make_wallet/signup';
 
 import reportWebVitals from './reportWebVitals';
+import SignUp from './Components/Make_wallet/signup';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
      
-    <Signup/>
+    <SignUp/>
    
   </React.StrictMode>
 );

@@ -9,11 +9,12 @@ import PersonAdd from '@mui/icons-material/PersonAdd';
 import CircleRoundedIcon from '@mui/icons-material/CircleRounded';
 import toast, { Toaster } from 'react-hot-toast';
 import Cookies from 'js-cookie'
-import config from '../config/config';
-import { addanotherAccount } from '../Components/Action/action';
+// import config from '../config/config';
+import { addanotherAccount } from '../Action/action';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { importanotherAccounts, getallAccountsss, switchacc } from '../Components/Action/action';
+import { importanotherAccounts, getallAccountsss, switchacc } from '../Action/action';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+
 import Modal from '@mui/material/Modal';
 import { Theme, useTheme } from '@mui/material/styles';
 import OutlinedInput from '@mui/material/OutlinedInput';
@@ -271,7 +272,7 @@ const SideHeader = (props) => {
 
 
         setTimeout(() => {
-            window.location.href = `${config.baseUrl}login`
+            // window.location.href = `${config.baseUrl}login`
         });
     }
     const handleClick = (event) => {
