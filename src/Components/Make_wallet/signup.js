@@ -21,7 +21,7 @@ import {
     getCurrent,
     getComponentStack,
   } from 'react-chrome-extension-router';
-
+import WalletSelect from './WalletSelect';
 import Login from './login';
 import Test from '../../Components/test'
 const message="extension routing"
@@ -42,6 +42,9 @@ const SignUp = () => {
     if (loginData == "") {
     }
     else {
+                
+        goTo(WalletSelect, { message })
+
         // window.location.href = `${config.baseUrl}select-wallet/` + userId;
 
     }
@@ -120,6 +123,8 @@ const SignUp = () => {
                 // toast.success(res.msg);
 
                 setTimeout(() => {
+                    goTo(Login, { message })
+
                     // <Link to={`${config.baseUrl}login`}>
 {/* <Link component={Login} props={{ message}}>
                                     

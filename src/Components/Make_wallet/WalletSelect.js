@@ -19,6 +19,8 @@ import {
     getCurrent,
     getComponentStack,
   } from 'react-chrome-extension-router';
+import Login from './login';
+import Home from './Home'
 const userId = localStorage.getItem('UserId');
 console.log(userId)
 const message="hello"
@@ -44,39 +46,19 @@ const WalletSelect = () => {
     const loginData = (!Cookies.get('loginSuccess')) ? [] : JSON.parse(Cookies.get('loginSuccess'));
 
     if (loginData == "") {
+        goTo(Login, { message })
+
         // window.location.href = `${config.baseUrl}login/`;
 
     }
     else if (localStorage.getItem("HOME_PAGE")) {
+        goTo(Home, { message })
+
         // window.location.href = `${config.baseUrl}home/`;
     }
 
     const [wallet, setWallet] = React.useState([])
 
-
-    // const CreateNewWallet = async () => {
-    //     let data = { userId: userId }
-
-    //     let res = await CreateNew(data);
-    //     console.log(res, "update in database")
-    //     localStorage.setItem('address', res.data.wallet_address);
-
-    //     localStorage.setItem('secretKey', res.data.key);
-
-    //     setWallet(res)
-
-    //     if (res.success) {
-    //         toast.success(res.msg);
-
-    //         setTimeout(() => {
-    //             window.location.href = `${config.baseUrl}secret-phrase/` + userId;
-    //         }, 1200);
-    //     } else {
-    //         toast.error(res.msg);
-    //     }
-
-    // }
-    
 
     const CreateNewWallet = async () => {
      
@@ -93,6 +75,8 @@ console.log(res, "kyyyyyyyy")
             //toast.success(res.msg);
 
             setTimeout(() => {
+            goTo(SecretPhrase, { message })
+
             // window.location.href = `${config.baseUrl}secret-phrase/` + userId;
             }, 1200);
         } else {
@@ -175,8 +159,7 @@ console.log(res, "kyyyyyyyy")
                     <Grid item sm={1}></Grid>
                 </Grid>
 
-    <button onClick={() => goTo(SecretPhrase, { message })}>
-secretKey    </button>
+ 
             </Container>
         </>
     )

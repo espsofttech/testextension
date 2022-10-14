@@ -3,8 +3,20 @@ import { Container, Grid, Typography, Button, Box } from '@mui/material';
 import SideHeader from './SideHeader';
 import logo from '../images/logo.png'
 import Cookies from 'js-cookie'
+import Login  from '../Make_wallet/login';
 // import config from '../config/config';
 import { display } from '@mui/system';
+import {
+    goBack,
+    goTo,
+    popToTop,
+    Link,
+    Router,
+    getCurrent,
+    getComponentStack,
+  } from 'react-chrome-extension-router';
+
+  const message="cdgdg"
 const Common_header = () => {
 
     const loginData = (!Cookies.get('loginSuccess')) ? [] : JSON.parse(Cookies.get('loginSuccess'));
@@ -25,6 +37,8 @@ const Common_header = () => {
 
 
         setTimeout(() => {
+            goTo(Login, { message })
+
             // window.location.href = `${config.baseUrl}login`
         });
     }

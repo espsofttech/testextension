@@ -11,9 +11,10 @@
 // import ConfirmPhrase from '../Components/Make_Wallet/ConfirmPhrase';
 // import ConfirmKey from '../Components/Make_Wallet/CreateMnemonic';
 // import Send from '../Components/transection-pages/Send';
-// import Login from '../Components/Make_Wallet/login';
+// import Login from '../../Components/Make_wallet/login';
 // import Receive from '../Components/transection-pages/receive'
 // import SideHeader from '../Header/SideHeader'
+// import SignUp from '../Make_wallet/signup';
 // const RouterComponent = () => {
 
 //     // const loginData = (!Cookies.get('logintowallet')) ? [] : JSON.parse(Cookies.get('logintowallet'));
@@ -31,8 +32,12 @@
 //                     <Route path={`${config.baseUrl}`} element={<CreateWallet/>} />
 //                     <Route path={`${config.baseUrl}import-wallet/:id`} element={<ImportWallet/>} />
 //                     {/* <Route path={`${config.baseUrl}import-wallet`} element={<ImportWallet/>} /> */}
+//                     <Route path={`/`} element={<SignUp/>} />
 
-//                     {/* <Route path={`/home`} element={<Home/>} /> */}
+//                     <Route path={`/Home`} element={<Home/>} />
+
+//                     <Route path={`/login`} element={<Login/>} />
+
 
 //                     <Route path={`${config.baseUrl}login`} element={<Login/>} />
 //                     <Route path={`${config.baseUrl}select-wallet/:id`} element={<WalletSelect/>} />

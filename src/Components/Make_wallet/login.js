@@ -40,32 +40,23 @@ const Login = () => {
     const message="extension routing"
 
 //   const [checked, setChecked] = useState("")
-const navigate = useNavigate();
 
-// const switcher=()=>{
-//     navigate('/Home')
-// }
+
 
     if(loginData==""){
 
     }
     else if (localStorage.getItem("HOME_PAGE")) {
-    // setTimeout(() => {
-    //     switcher()
-    // }, 100);
+        goTo(Home, { message })
+
 
 
 
     }
     else{
+        alert("alert 2")
 
-        // setTimeout(() => {
-        //     switcher()
-        // }, 100);
-
-        // window.location.href = <WalletSelect/>
-
-        //  window.location.href = `${config.baseUrl}select-wallet/`+userId;
+         goTo(WalletSelect, { message })
 
     }
     let saveEmail=localStorage.getItem("email")
@@ -161,8 +152,10 @@ const navigate = useNavigate();
                         localStorage.setItem("address",res.data[0].wallet_Address )
                         localStorage.setItem("NAME",res.data[0].Name )
                         localStorage.setItem("Fingerprint",res.data[0].FingerPrint)
+                        goTo(Home, { message })
+                
                         console.log(res.data[0].wallet_Address,res.data[0].FingerPrint, "address")
-                        // window.location.href = `${config.baseUrl}home` ;
+                        goTo(Home, { message })
                     }, 2000);
                 }
 
@@ -175,6 +168,8 @@ const navigate = useNavigate();
                     Cookies.set('trasnactionpage', JSON.stringify("transaction data"));
 
                     setTimeout(() => {
+                        goTo(WalletSelect, { message })
+                
                         // window.location.href = `${config.baseUrl}select-wallet/` + User ;
                     }, 2000);
                 }
@@ -320,10 +315,7 @@ Register    </Link>
 
 
 
-
-                                         <button onClick={() => goTo (WalletSelect, { message })}>
-sample page    </button>                                       {/* </Link> */}
-
+                   
                                          {/* <Link to={`${config.baseUrl}select-wallet`}>
                                          <Button    variant="contained" color="secondary" size="large" className='create-btn'>
                                              Login

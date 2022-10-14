@@ -19,14 +19,22 @@ import Modal from '@mui/material/Modal';
 import { Theme, useTheme } from '@mui/material/styles';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import CircularProgress from '@mui/material/CircularProgress';
-import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
 import CloseIcon from '@mui/icons-material/Close';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import LogoutIcon from '@mui/icons-material/Logout';
 import GetAppIcon from '@mui/icons-material/GetApp';
-
-
+import Home from '../Make_wallet/Home'
+import {
+    goBack,
+    goTo,
+    popToTop,
+    Link,
+    Router,
+    getCurrent,
+    getComponentStack,
+  } from 'react-chrome-extension-router';
+const message="msg"
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
 const MenuProps = {
@@ -273,6 +281,8 @@ const SideHeader = (props) => {
 
 
         setTimeout(() => {
+            goTo(Home, { message })
+
             // window.location.href = `${config.baseUrl}login`
         });
     }
