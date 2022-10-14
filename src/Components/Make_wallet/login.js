@@ -12,6 +12,8 @@ import SignUp  from './signup';
 import CircularProgress from '@mui/material/CircularProgress';
 import Swal from 'sweetalert2'
 import Test from '../test';
+import {useNavigate} from "react-router-dom"
+
 import {
     goBack,
     goTo,
@@ -21,7 +23,8 @@ import {
     getCurrent,
     getComponentStack,
   } from 'react-chrome-extension-router';
-  import Home from '../Make_wallet/Home'
+
+import Home from '../Make_wallet/Home'
 // import config from '../../config/config';
 const CryptoJS = require("crypto-js");
 const userId=localStorage.getItem('UserId');
@@ -37,20 +40,29 @@ const Login = () => {
     const message="extension routing"
 
 //   const [checked, setChecked] = useState("")
+const navigate = useNavigate();
 
+// const switcher=()=>{
+//     navigate('/Home')
+// }
 
     if(loginData==""){
 
     }
     else if (localStorage.getItem("HOME_PAGE")) {
-    //  <Link component={Home} props={{ message }}>
-    //   </Link>
+    // setTimeout(() => {
+    //     switcher()
+    // }, 100);
 
-         window.location.href = {Home}
 
-        // window.location.href = `${config.baseUrl}home/`;
+
     }
     else{
+
+        // setTimeout(() => {
+        //     switcher()
+        // }, 100);
+
         // window.location.href = <WalletSelect/>
 
         //  window.location.href = `${config.baseUrl}select-wallet/`+userId;
@@ -59,27 +71,27 @@ const Login = () => {
     let saveEmail=localStorage.getItem("email")
     let savePassword=localStorage.getItem("password")
 
-const handleChange = event => {
-    if (event.target.checked&&form.email!==""&&form.password!=="") {
-      console.log('✅ Checkbox is checked');
-      localStorage.setItem("email", form.email)
-       localStorage.setItem("password", form.password)
-    } else {
-        localStorage.removeItem("email")
-        localStorage.removeItem("password")
-      console.log('⛔️ Checkbox is NOT checked');
-    }
-    setIsSubscribed(current => !current);
-    let saveEmail=localStorage.getItem("email")
-    let savePassword=localStorage.getItem("password")
+// const handleChange = event => {
+//     if (event.target.checked&&form.email!==""&&form.password!=="") {
+//       console.log('✅ Checkbox is checked');
+//       localStorage.setItem("email", form.email)
+//        localStorage.setItem("password", form.password)
+//     } else {
+//         localStorage.removeItem("email")
+//         localStorage.removeItem("password")
+//       console.log('⛔️ Checkbox is NOT checked');
+//     }
+//     setIsSubscribed(current => !current);
+//     let saveEmail=localStorage.getItem("email")
+//     let savePassword=localStorage.getItem("password")
 
-    setForm((old) => {
-        return { ...old, [email]: saveEmail, [password]: savePassword }
-    })
-    console.log(form.email, form.password,)
+//     setForm((old) => {
+//         return { ...old, [email]: saveEmail, [password]: savePassword }
+//     })
+//     console.log(form.email, form.password,)
 
 
-  };
+//   };
 
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
     const inputHandler = async (e) => {
@@ -195,7 +207,7 @@ const handleChange = event => {
     });
     return (
         <>
-      
+
         <Toaster />
         <Common_header/>
             <Container>
@@ -239,7 +251,7 @@ const handleChange = event => {
                                      <span >New to LittleLmabo Wallet?
   </span>                        <Link component={SignUp} props={{ message }}>
                                     Login
-    </Link> 
+    </Link>
                                  </Grid>
                                  <Grid item xs={6}>
                                      <ThemeProvider theme={theme} >
@@ -293,7 +305,7 @@ const handleChange = event => {
 
                              <Grid item xs={12}>
 
-                                     <span >New to LittleLmabo Wallet? 
+                                     <span >New to LittleLmabo Wallet?
                                      <Link onClick={() => goBack()}>
 Register    </Link>
                                      </span>
@@ -306,7 +318,8 @@ Register    </Link>
                                              Login
                                          </Button>
 
-                                      
+
+
 
                                          <button onClick={() => goTo (WalletSelect, { message })}>
 sample page    </button>                                       {/* </Link> */}

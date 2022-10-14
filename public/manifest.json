@@ -1,13 +1,19 @@
 {
-  "short_name": "RRC",
-  "name": "React sample",
-  "permissions": ["activeTab", "declarativeContent", "storage", "Tabs"],
+  "short_name": "LLC",
+  "name": "llc extension sample",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
 
   "manifest_version": 3,
   "version": "0.0.1",
   "action": {
     "default_popup": "index.html",
     "default_title": "LittleLamboCoin wallet"
+  },
+  "icons": {
+    "16": "logo.png",
+    "32": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
   },
 
  

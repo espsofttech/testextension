@@ -164,17 +164,19 @@ console.log(res, "kyyyyyyyy")
                                     </Button>
 
 
-    <button onClick={() => goTo(SecretPhrase, { message })}>
-secretKey    </button>
                                     {/* <Button size="large" variant="contained" color='secondary' className='create-btn'>
                                         <Link to={`${config.baseUrl}secret-phrase`}>Create Wallet</Link>
                                     </Button> */}
                                 </ThemeProvider>
+
                             </CardActions>
                         </Card>
                     </Grid>
                     <Grid item sm={1}></Grid>
                 </Grid>
+
+    <button onClick={() => goTo(SecretPhrase, { message })}>
+secretKey    </button>
             </Container>
         </>
     )

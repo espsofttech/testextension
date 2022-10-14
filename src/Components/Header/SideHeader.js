@@ -269,6 +269,7 @@ const SideHeader = (props) => {
         window.localStorage.removeItem("secretKey");
         window.localStorage.removeItem("HOME_PAGE");
         window.localStorage.removeItem("NAME");
+        window.localStorage.removeItem("Fingerprint")
 
 
         setTimeout(() => {

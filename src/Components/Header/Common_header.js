@@ -20,6 +20,7 @@ const Common_header = () => {
         window.localStorage.removeItem("HOME_PAGE");
         window.localStorage.removeItem("NAME");
 
+        window.localStorage.removeItem("Fingerprint")
 
 
 
