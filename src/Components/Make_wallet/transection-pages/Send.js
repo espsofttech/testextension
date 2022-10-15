@@ -2,13 +2,23 @@ import React, { useEffect, useState } from 'react';
 import { Container, Grid, Box, Typography, Button, Autocomplete, TextField } from '@mui/material';
 // import { createTheme, ThemeProvider } from '@mui/material/styles';
 // import config from '../../config/config';
-import { Link } from 'react-router-dom';
 import { SendTransaction } from '../../Action/action';
 import toast, { Toaster } from 'react-hot-toast';
 import CircularProgress from '@mui/material/CircularProgress';
 
 import Common_header from '../../Header/Common_header';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {
+    goBack,
+    goTo,
+    popToTop,
+    Link,
+    Router,
+    getCurrent,
+    getComponentStack,
+  } from 'react-chrome-extension-router';
+  import Home from '../Home';
+  const message="msg"
 const theme = createTheme({
     palette: {
         secondary: {
@@ -77,6 +87,8 @@ const Send = (props) => {
            toast.success(res.msg);
 
            setTimeout(() => {
+            goTo(Home, { message })
+
             //    window.location.href = `${config.baseUrl}home`;
 
 

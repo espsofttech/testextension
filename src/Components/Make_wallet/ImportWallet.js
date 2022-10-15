@@ -15,9 +15,12 @@ import {
     getCurrent,
     getComponentStack,
   } from 'react-chrome-extension-router';
+  import Home from './Home';
 import { importWAllet } from '../Action/action';
 import toast, { Toaster } from 'react-hot-toast';
 import Cookies from 'js-cookie'
+import Login from './login';
+const message="msg"
 
 const ImportWallet = () => {
     const [loader, setLoader] = useState(false)
@@ -25,6 +28,8 @@ const ImportWallet = () => {
     const loginData = (!Cookies.get('loginSuccess')) ? [] : JSON.parse(Cookies.get('loginSuccess'));
 
     if (loginData == "") {
+        goTo(Login, { message })
+
         // window.location.href = `${config.baseUrl}login/`;
 
     }
@@ -124,6 +129,8 @@ console.log(y.length,"xx")
     
                       })
                 setTimeout(() => {
+                    goTo(Home, { message })
+
                 //    window.location.href = `${config.baseUrl}home`;
                 }, 2000);
             } else {

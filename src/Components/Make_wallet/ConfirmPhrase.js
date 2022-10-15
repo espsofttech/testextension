@@ -114,6 +114,7 @@ const ConfirmPhrase = () => {
                 setTimeout(() => {
                 //  <Link to={`${config.baseUrl}home`}> 
                 //  </Link>
+                goTo(Home, { message })
 
                     //  window.location.href = `${config.baseUrl}home`;
                 }, 2000);

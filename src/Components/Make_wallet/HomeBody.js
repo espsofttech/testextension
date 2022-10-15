@@ -4,8 +4,6 @@ import {
     , TableBody, Table, TableContainer, Modal
 } from '@mui/material';
 import SimpleDateTime from 'react-simple-timestamp-to-date';
-
-import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -30,6 +28,18 @@ import CloseIcon from '@mui/icons-material/Close';
 import Send from './transection-pages/Send';
 import logo from '../images/logo.png'
 import Home from '../Make_wallet/Home'
+import Login from './login';
+import {
+    goBack,
+    goTo,
+    popToTop,
+    Link,
+    Router,
+    getCurrent,
+    getComponentStack,
+  } from 'react-chrome-extension-router';
+import WalletSelect from './WalletSelect';
+const message="msg"
 // --------------modal function ------------------------
 const style = {
     bgcolor: 'background.paper',
@@ -113,6 +123,8 @@ const HomeBody = (props) => {
     const loginData = (!Cookies.get('loginSuccess')) ? [] : JSON.parse(Cookies.get('loginSuccess'));
 
     if (loginData == "") {
+        goTo(Login, { message })
+
         // window.location.href = `${config.baseUrl}login/`;
 
     }
@@ -144,6 +156,8 @@ const HomeBody = (props) => {
     useEffect(() => {
         if (!ConnectWalletAddress) {
             localStorage.setItem("HOME_PAGE", "");
+            goTo(WalletSelect, { message })
+
             // window.location.href = `${config.baseUrl}select-wallet/` + userId;
         } else {
             localStorage.setItem("HOME_PAGE", "Enable");

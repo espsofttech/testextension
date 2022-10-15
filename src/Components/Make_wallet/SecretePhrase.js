@@ -17,6 +17,8 @@ import {
     getCurrent,
     getComponentStack,
   } from 'react-chrome-extension-router';
+  import Login from './login';
+  import Home from './Home';
 import Common_header from '../Header/Common_header';
 const message="kch b"
 const SecretPhrase = () => {
@@ -40,10 +42,14 @@ const SecretPhrase = () => {
     const loginData = (!Cookies.get('loginSuccess')) ? [] : JSON.parse(Cookies.get('loginSuccess'));
 
     if (loginData == "") {
+        goTo(Login, { message })
+
         // window.location.href = `${config.baseUrl}login/`;
 
     }
     else if (localStorage.getItem("HOME_PAGE")) {
+        goTo(Home, { message })
+
         // window.location.href = `${config.baseUrl}home/`;
     }
     const downloadTxtFile = () => {

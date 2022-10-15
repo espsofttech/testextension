@@ -198,6 +198,8 @@ const SideHeader = (props) => {
                 toast.success(res.msg);
 
                 setTimeout(() => {
+                    goTo(Home, { message })
+
                     //<Link to={`${config.baseUrl}home`}></Link>
                     // window.location.href = `${config.baseUrl}home`;
                 }, 2000);
