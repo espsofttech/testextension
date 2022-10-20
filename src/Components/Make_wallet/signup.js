@@ -48,7 +48,10 @@ const SignUp = () => {
         // window.location.href = `${config.baseUrl}select-wallet/` + userId;
 
     }
-
+    
+useEffect(()=>{
+    isGobyInstalled();
+},[])
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
     const inputHandler = async (e) => {
         const { name, value } = e.target
@@ -94,6 +97,12 @@ const SignUp = () => {
             return true
         }
     }
+    
+    const isGobyInstalled = () => {
+        const { chia } = window;
+        Boolean(chia && chia.isGoby)
+      }
+      console.log(window, "jhjh")
 
     const SubmitForm = async (e) => {
         e.preventDefault()

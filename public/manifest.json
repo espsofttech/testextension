@@ -1,6 +1,6 @@
 {
   "short_name": "LLC",
-  "name": "llc extension sample",
+  "name": "LLC",
   "permissions": ["activeTab", "declarativeContent", "storage"],
 
   "manifest_version": 3,

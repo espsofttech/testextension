@@ -223,8 +223,7 @@ const ConfirmPhrase = () => {
                                             Confirm
                                         </Button>
 }
-<button onClick={() => goTo(Home, { message })}>
-sample page    </button>
+
                                     </ThemeProvider>
                                     {/* </Link> */}
                                 </Grid>
