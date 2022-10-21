@@ -125,7 +125,6 @@ const HomeBody = (props) => {
     if (loginData == "") {
         goTo(Login, { message })
 
-        // window.location.href = `${config.baseUrl}login/`;
 
     }
 
@@ -133,7 +132,6 @@ const HomeBody = (props) => {
         //  window.location.href = `${config.baseUrl}select-wallet/`+userId;
 
     }
-    // const [value, setValue] = React.useState('1');
 
     const [value, setValue] = React.useState(0);
 

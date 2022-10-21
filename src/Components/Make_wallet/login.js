@@ -54,7 +54,6 @@ const Login = () => {
 
     }
     else{
-        alert("alert 2")
 
          goTo(WalletSelect, { message })
 
@@ -134,15 +133,15 @@ const Login = () => {
             if (res.success) {
 
                 console.log(res, "success" )
-               Swal.fire({
-                    icon: 'success',
-                    title: "Login Successfully" ,
-                    buttonsStyling: false,
-                    customClass: {
-                        confirmButton: 'example-class' //insert class here
-                    }
-                      })
-                // toast.success("Login Success");
+            //    Swal.fire({
+            //         icon: 'success',
+            //         title: "Login Successfully" ,
+            //         buttonsStyling: false,
+            //         customClass: {
+            //             confirmButton: 'example-class' //insert class here
+            //         }
+            //           })
+                toast.success("Login Success");
                 console.log(JSON.stringify(res), "llllllllllllllllll")
                 Cookies.set('loginSuccess', JSON.stringify(res));
                 if(res.msg==="user already into data base redirect to homepage"){
@@ -152,8 +151,6 @@ const Login = () => {
                         localStorage.setItem("address",res.data[0].wallet_Address )
                         localStorage.setItem("NAME",res.data[0].Name )
                         localStorage.setItem("Fingerprint",res.data[0].FingerPrint)
-                        goTo(Home, { message })
-                
                         console.log(res.data[0].wallet_Address,res.data[0].FingerPrint, "address")
                         goTo(Home, { message })
                     }, 2000);
@@ -176,18 +173,18 @@ const Login = () => {
 
 
             } else {
-                Swal.fire({
-                    icon: 'error',
-                    title: res.msg,
-                    buttonsStyling: false,
+                // Swal.fire({
+                //     icon: 'error',
+                //     title: res.msg,
+                //     buttonsStyling: false,
 
-                    customClass: {
-                        confirmButton: 'example-class' //insert class here
-                    }
+                //     customClass: {
+                //         confirmButton: 'example-class' //insert class here
+                //     }
 
-                      })
+                //       })
                 console.log(res.msg, "error" )
-                // toast.error(res.msg);
+                toast.error(res.msg);
             }
 
         }

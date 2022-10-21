@@ -126,16 +126,17 @@ const ConfirmPhrase = () => {
           
         }else{
             setLoader(false)
-            Swal.fire({
-                icon: 'error',
-                title: "Invalid Seed Phrase" ,
-                buttonsStyling: false,
+            // Swal.fire({
+            //     icon: 'error',
+            //     title: "Invalid Seed Phrase" ,
+            //     buttonsStyling: false,
 
-                customClass: {
-                    confirmButton: 'example-class' //insert class here
-                }
+            //     customClass: {
+            //         confirmButton: 'example-class' //insert class here
+            //     }
 
-                  })
+            //       })
+            toast.error("Invalid Seed Phrase")
         }
         
     }

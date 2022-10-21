@@ -116,18 +116,20 @@ console.log(y.length,"xx")
                 setLoader(false)
 
                 // toast.success(res.msg);
-                Swal.fire({
-                    icon: 'success',
-                    title: res.msg ,
-                    buttonsStyling: false,
+                // Swal.fire({
+                //     icon: 'success',
+                //     title: res.msg ,
+                //     buttonsStyling: false,
 
-                    customClass: {
-                        confirmButton: 'example-class' //insert class here
-                    }
-                                    
+                //     customClass: {
+                //         confirmButton: 'example-class' //insert class here
+                //     }
+                                
 
     
-                      })
+                //       })
+
+                toast.success(res.msg )
                 setTimeout(() => {
                     goTo(Home, { message })
 
@@ -136,30 +138,31 @@ console.log(y.length,"xx")
             } else {
                 setLoader(false)
                 console.log(res.msg)
-                // toast.error(res.msg);
-                Swal.fire({
-                    icon: 'error',
-                    title: res.msg ,
-                    buttonsStyling: false,
+                toast.error(res.msg);
+                // Swal.fire({
+                //     icon: 'error',
+                //     title: res.msg ,
+                //     buttonsStyling: false,
 
-                    customClass: {
-                        confirmButton: 'example-class' //insert class here
-                    }
-                      })
+                //     customClass: {
+                //         confirmButton: 'example-class' //insert class here
+                //     }
+                //       })
             }
     
         }
         else{
-            Swal.fire({
-                icon: 'error',
-                title: "24 words Phrase Required" ,
-                buttonsStyling: false,
+            // Swal.fire({
+            //     icon: 'error',
+            //     title: "24 words Phrase Required" ,
+            //     buttonsStyling: false,
 
-                customClass: {
-                    confirmButton: 'example-class' //insert class here
-                }
+            //     customClass: {
+            //         confirmButton: 'example-class' //insert class here
+            //     }
 
-                  })
+            //       })
+            toast.success("24 phrase required")
             setLoader(false)
         }
    

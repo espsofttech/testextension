@@ -27,17 +27,17 @@ const SecretPhrase = () => {
 
     const copyToClipboard = (id) => {
         copy(id);
-        Swal.fire({
-            icon: 'success',
-            title: "Copied" ,
-            buttonsStyling: false,
+        // Swal.fire({
+        //     icon: 'success',
+        //     title: "Copied" ,
+        //     buttonsStyling: false,
 
-            customClass: {
-                confirmButton: 'example-class' //insert class here
-            }
+        //     customClass: {
+        //         confirmButton: 'example-class' //insert class here
+        //     }
 
-              })
-        // toast.success("Copied");
+        //       })
+       toast.success("Copied");
     }
     const loginData = (!Cookies.get('loginSuccess')) ? [] : JSON.parse(Cookies.get('loginSuccess'));
 
@@ -61,16 +61,17 @@ const SecretPhrase = () => {
         element.download = "myFile.txt";
         document.body.appendChild(element);
         element.click();
-        Swal.fire({
-            icon: 'success',
-            title: "File Downloaded" ,
-            buttonsStyling: false,
+        // Swal.fire({
+        //     icon: 'success',
+        //     title: "File Downloaded" ,
+        //     buttonsStyling: false,
 
-            customClass: {
-                confirmButton: 'example-class' //insert class here
-            }
+        //     customClass: {
+        //         confirmButton: 'example-class' //insert class here
+        //     }
 
-              })
+        //       })
+        toast.error("File Downloaded")
       
     };
     const theme = createTheme({
