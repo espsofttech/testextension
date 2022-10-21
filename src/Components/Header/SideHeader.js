@@ -25,6 +25,7 @@ import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import LogoutIcon from '@mui/icons-material/Logout';
 import GetAppIcon from '@mui/icons-material/GetApp';
 import Home from '../Make_wallet/Home'
+import Login from '../Make_wallet/login';
 import {
     goBack,
     goTo,
@@ -79,6 +80,8 @@ const userId = localStorage.getItem('UserId');
 // console.log(userId)
 
 const id = parseInt(userId)
+alert(id)
+console.log(id, "ges")
 const style = {
     position: 'absolute',
     top: '50%',
@@ -119,6 +122,7 @@ const SideHeader = (props) => {
         let selected = getAllAsset.data.filter((item) => { return selectFilgerPrint == item.FingerPrint })
         setSelectedWallet(selected[0])
         setAllAccounts(getAllAsset.data)
+        console.log(getAllAsset, "seleel")
 
     }
 
@@ -237,7 +241,7 @@ const SideHeader = (props) => {
         let data = { userId: id, name: form.name }
         if (form.name !== "") {
             let accounts = await addanotherAccount(data)
-            console.log(accounts, "}}}}}}}")
+            console.log(accounts, data, "daaataaaaa")
             setLoader(false)
             if (accounts.success == true) {
                 console.log(data, "----")
@@ -283,7 +287,7 @@ const SideHeader = (props) => {
 
 
         setTimeout(() => {
-            goTo(Home, { message })
+            goTo(Login, { message })
 
             // window.location.href = `${config.baseUrl}login`
         });
@@ -302,6 +306,7 @@ const SideHeader = (props) => {
     const handleClose2 = () => {
         setOpen1(false);
     };
+
     return (
         <>
             <Toaster />
@@ -411,7 +416,7 @@ const SideHeader = (props) => {
                                         </Select>
                                     </FormControl> */}
                                     <FormControl variant="standard" sx={{ m: 1, minWidth: 300 }}>
-                                        {/* <InputLabel id="demo-simple-select-standard-label">Age</InputLabel> */}
+                                         {/* <InputLabel id="demo-simple-select-standard-label">Age</InputLabel>  */}
                                         <Select
                                             fullWidth
                                             labelId="demo-simple-select-standard-label"

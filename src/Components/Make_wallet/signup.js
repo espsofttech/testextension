@@ -120,15 +120,15 @@ useEffect(()=>{
 
                 setLoader(false)
                 console.log(loader, "sucess")
-                Swal.fire({
-                    icon: 'success',
-                    title: res.msg,
-                    buttonsStyling: false,
-                    customClass: {
-                        confirmButton: 'example-class' //insert class here
-                    }
+                // Swal.fire({
+                //     icon: 'success',
+                //     title: res.msg,
+                //     buttonsStyling: false,
+                //     customClass: {
+                //         confirmButton: 'example-class' //insert class here
+                //     }
 
-                })
+                // })
                 // toast.success(res.msg);
 
                 setTimeout(() => {
@@ -143,16 +143,16 @@ useEffect(()=>{
                 console.log(loader, "false")
 
                 setLoader(false)
-                Swal.fire({
-                    icon: 'error',
-                    title: res.msg,
-                    buttonsStyling: false,
-                    customClass: {
-                        confirmButton: 'example-class' //insert class here
-                    }
+                // Swal.fire({
+                //     icon: 'error',
+                //     title: res.msg,
+                //     buttonsStyling: false,
+                //     customClass: {
+                //         confirmButton: 'example-class' //insert class here
+                //     }
 
-                })
-                // toast.error(res.msg);
+                // })
+                toast.error(res.msg);
             }
 
         }
