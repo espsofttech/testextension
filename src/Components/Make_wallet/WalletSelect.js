@@ -98,8 +98,7 @@ console.log(res, "kyyyyyyyy")
                     </Typography>
                 </Grid>
                 <Grid item container xs={12} spacing={3}>
-                    <Grid item sm={1}></Grid>
-                    <Grid item sm={5}>
+                    <Grid item sm={12}>
                         <Card sx={{ minWidth: 275, background: "black" }} className="wallet-cards">
                             <CardContent>
                                 <GetAppIcon />
@@ -127,7 +126,7 @@ console.log(res, "kyyyyyyyy")
                             </CardActions>
                         </Card>
                     </Grid>
-                    <Grid item sm={5}
+                    <Grid item sm={12}
                     >
                         <Card sx={{ minWidth: 275, background: "black" }} className="wallet-cards">
                             <CardContent>
@@ -156,7 +155,6 @@ console.log(res, "kyyyyyyyy")
                             </CardActions>
                         </Card>
                     </Grid>
-                    <Grid item sm={1}></Grid>
                 </Grid>
 
  

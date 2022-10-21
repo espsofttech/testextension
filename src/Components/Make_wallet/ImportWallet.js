@@ -186,8 +186,7 @@ console.log(y.length,"xx")
                 </Box> : */}
                 <Container>
                     <Grid container item my={3} className="import-wallet">
-                        <Grid item xs={2}></Grid>
-                        <Grid item xs={8}>
+                        <Grid item xs={12}>
                             <Typography variant='h3' component="h3" >
                                 Import a wallet with Secret Recovery Phrase
                             </Typography>
@@ -221,15 +220,15 @@ console.log(y.length,"xx")
                                 </Grid>
                             </Grid>
                             <Grid item container my={3} spacing={3} className="private-key">
-                                <Grid item sm={4}>
+                                <Grid item sm={12}>
 
                                     <TextareaAutosize
-                                        maxRows={20}
+                                        minRows={10}
                                         aria-label="maximum height"
                                         placeholder="Paste Your Already existing Secret Phrase here... "
                                         onChange={inputHandler}
                                         name='form'
-                                        style={{ width: 550, height: 250 }}
+                                        className='import-area'
                                     />
 
                                     {/* 1. <TextField id="outlined-basic"  style={{height:"100px"}} autocomplete="off" variant="outlined" onChange={inputHandler} name="one" value={form.one} /> */}
@@ -281,10 +280,6 @@ console.log(y.length,"xx")
                                 </Grid>
                             </Grid>
                         </Grid>
-
-
-                        <Grid item xs={2}></Grid>
-
                     </Grid>
 
                 </Container>

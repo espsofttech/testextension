@@ -20,11 +20,11 @@ import {
     Router,
     getCurrent,
     getComponentStack,
-  } from 'react-chrome-extension-router';
+} from 'react-chrome-extension-router';
 import WalletSelect from './WalletSelect';
 import Login from './login';
 import Test from '../../Components/test'
-const message="extension routing"
+const message = "extension routing"
 
 
 
@@ -42,16 +42,16 @@ const SignUp = () => {
     if (loginData == "") {
     }
     else {
-                
+
         goTo(WalletSelect, { message })
 
         // window.location.href = `${config.baseUrl}select-wallet/` + userId;
 
     }
-    
-useEffect(()=>{
-    isGobyInstalled();
-},[])
+
+    useEffect(() => {
+        isGobyInstalled();
+    }, [])
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
     const inputHandler = async (e) => {
         const { name, value } = e.target
@@ -97,12 +97,12 @@ useEffect(()=>{
             return true
         }
     }
-    
+
     const isGobyInstalled = () => {
         const { chia } = window;
         Boolean(chia && chia.isGoby)
-      }
-      console.log(window, "jhjh")
+    }
+    console.log(window, "jhjh")
 
     const SubmitForm = async (e) => {
         e.preventDefault()
@@ -135,7 +135,7 @@ useEffect(()=>{
                     goTo(Login, { message })
 
                     // <Link to={`${config.baseUrl}login`}>
-{/* <Link component={Login} props={{ message}}>
+                    {/* <Link component={Login} props={{ message}}>
                                     
     </Link> */}
                 }, 1200);
@@ -167,78 +167,75 @@ useEffect(()=>{
     });
     return (
         <>
- <Router> 
-            <Toaster />
-            <Common_header />
+            <Router>
+                <Toaster />
+                <Common_header />
 
-            <Container>
+                <Container>
 
-                <Grid container item className="create-page" mt={5} spacing={1}>
-                    <Grid item md={2}>
+                    <Grid container item className="create-page" mt={5} spacing={1}>
+                        <Grid item md={12}>
+                            <Box
+                            >
+                           <Typography variant="h3" component="h3">
+                                    Create New Account
+                                </Typography>
 
-                    </Grid>
-                    <Grid item md={6}>
-                        <Box
-                        >
-                            <Typography variant="h3" component="h3">
-                                Create New Account
-                            </Typography>
+                                <Grid item md={10} mt={2} container rowSpacing={4}>
+                                    <Grid item xs={12}>
+                                        <TextField inputProps={{
+                                            autocomplete: 'new-password',
+                                            form: {
+                                                autocomplete: 'off',
+                                            },
+                                        }} type="email" fullWidth label="Email" id="fullWidth" onChange={inputHandler} name="email" value={form.email} />
+                                        <span style={{ color: 'red' }} className="validationErr">{validatioError.emailError}</span>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <TextField inputProps={{
+                                            autocomplete: 'new-password',
+                                            form: {
+                                                autocomplete: 'off',
+                                            },
+                                        }} type="password" fullWidth label="New Password" id="fullWidth" onChange={inputHandler} name="password" value={form.password} />
+                                        <span style={{ color: 'red' }} className="validationErr">{validatioError.passwordError}</span>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <TextField inputProps={{
+                                            autocomplete: 'new-password',
+                                            form: {
+                                                autocomplete: 'off',
+                                            },
+                                        }} type="password" fullWidth label="Confirm Password" id="fullWidth" onChange={inputHandler} name="confirm_password" value={form.confirm_password} />
+                                        <span style={{ color: 'red' }} className="validationErr">{validatioError.confirmPasswordError}</span>
 
-                            <Grid item md={10} mt={2} container rowSpacing={4}>
-                                <Grid item xs={12}>
-                                    <TextField inputProps={{
-                                        autocomplete: 'new-password',
-                                        form: {
-                                            autocomplete: 'off',
-                                        },
-                                    }} type="email" fullWidth label="Email" id="fullWidth" onChange={inputHandler} name="email" value={form.email} />
-                                    <span style={{ color: 'red' }} className="validationErr">{validatioError.emailError}</span>
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <TextField inputProps={{
-                                        autocomplete: 'new-password',
-                                        form: {
-                                            autocomplete: 'off',
-                                        },
-                                    }} type="password" fullWidth label="New Password" id="fullWidth" onChange={inputHandler} name="password" value={form.password} />
-                                    <span style={{ color: 'red' }} className="validationErr">{validatioError.passwordError}</span>
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <TextField inputProps={{
-                                        autocomplete: 'new-password',
-                                        form: {
-                                            autocomplete: 'off',
-                                        },
-                                    }} type="password" fullWidth label="Confirm Password" id="fullWidth" onChange={inputHandler} name="confirm_password" value={form.confirm_password} />
-                                    <span style={{ color: 'red' }} className="validationErr">{validatioError.confirmPasswordError}</span>
-
-                                </Grid>
-                                {/* <Grid item xs={12}>
+                                    </Grid>
+                                    {/* <Grid item xs={12}>
                                     <Checkbox {...label} />
                                     <span className='create-check'> I have read and agree to the Terms of Use</span>
                                 </Grid> */}
-                                <Grid item xs={12}>
+                                    <Grid item xs={12}>
 
-                                   <span >Already Have account?
-{/* 
+                                        <span >Already Have account?
+                                            {/* 
                                    <button onClick={() => goTo(Login, { message })}>
 sample page    </button> */}
-     
-                                    <Link component={Login} props={{ message }}>
-                                    Login
-    </Link> 
 
-    </span>
-                                </Grid>
+                                            <Link component={Login} props={{ message }}>
+                                                Login
+                                            </Link>
 
-                                <Grid item xs={6}>
-                                    {/* <Link to={`${config.baseUrl}login`}> */}
+                                        </span>
+                                    </Grid>
+
+                                    <Grid item xs={6}>
+                                        {/* <Link to={`${config.baseUrl}login`}> */}
                                         <ThemeProvider theme={theme} >
 
                                             {loader ? <Button disable onClick={SubmitForm} variant="contained" color="secondary" size="large" className='create-btn loader'>
 
                                                 {/* <Box sx={{ display: 'flex'}}> */}
-                                                <CircularProgress  className='process'/>Processeing...
+                                                <CircularProgress className='process' />Processeing...
                                                 {/* </Box>  */}
 
 
@@ -252,16 +249,16 @@ sample page    </button> */}
                                             Create
                                         </Button>
                                          */}
-             </ThemeProvider>
-                                    {/* </Link> */}
+                                        </ThemeProvider>
+                                        {/* </Link> */}
+                                    </Grid>
                                 </Grid>
-                            </Grid>
-                        </Box>
+                            </Box>
 
+                        </Grid>
                     </Grid>
-                </Grid>
 
-            </Container>
+                </Container>
 
             </Router>   </>
     )

@@ -210,10 +210,7 @@ const Login = () => {
       <CircularProgress /><p style={{color:"blue"}}>Processeing...</p>
     </Box>: */}
                 <Grid   container item className="create-page" mt={5} spacing={1}>
-                    <Grid item md={2}>
-
-                    </Grid>
-                    <Grid item md={6}>
+                    <Grid item md={12}>
                         <Box
                         >
                             <Typography variant="h3" component="h3">
